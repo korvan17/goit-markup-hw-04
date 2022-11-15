@@ -7,7 +7,8 @@
   --bcg-dark: #2f303a;
   --bcg-white: #f5f5f5;
   --bcg-grey: #f5f4fa;
-  --icon-fill: #AFB1B8;
+  --icon-fill: #afb1b8;
+  --border-grey: #eeeeee;
 }
 
 /* ----------------GLOBAL---------------- */
@@ -77,6 +78,7 @@ img {
 
 .block-header {
   display: flex;
+  height: 31px;
 }
 
 .navigation {
@@ -133,7 +135,6 @@ img {
   fill: var(--color-accent);
 }
 
-
 /* -----------------------MAIN ------------------------- */
 
 /* ---------------HERO ----------------- */
@@ -173,7 +174,7 @@ img {
   letter-spacing: 0.06em;
   background: var(--color-accent);
   cursor: pointer;
-  background: #2196f3;
+  background: var(--color-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   min-width: 216px;
@@ -184,26 +185,43 @@ img {
 /* -------------ADVANTEGE--------------- */
 
 .advantage {
-  display: flex;
+  /* display: flex; */
 }
 /* Знаю що це не вірно чекаю коли навчать як треба */
 .advantage-hide {
   display: none;
 }
 
-.advantage > .list {
+.advantage.container {
+}
+
+.advantage-list-icon {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.advatage-item-icon {
+  width: 270px;
+  height: 120px;
+  background: var(--bcg-grey);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantage-icon {
+}
+
+.advatage-text-list {
   display: flex;
   gap: 30px;
 }
 
-.advantage.container {
-}
-
 .advantage-point {
   width: calc(100% - 3 * 30px / 4);
-}
-
-.icon-adventage {
 }
 
 .advantage-title {
@@ -282,7 +300,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  fill: #afb1b8;
+  fill: var(--icon-fill);
 }
 
 .conteiner-socialmesh {
@@ -299,16 +317,16 @@ img {
 }
 
 .link-socialmesh:hover {
-  background: #2196f3;
+  background: var(--color-accent);
   border-radius: 50%;
 }
 
 .link-socialmesh:hover .icon-socialmesh {
-  fill: #ffffff;
+  fill: var(--color-white);
 }
 
 .icon-socialmesh {
-  fill: #afb1b8;
+  fill: var(--icon-fill);
 }
 
 .team-title {
@@ -368,7 +386,7 @@ img {
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .footer-socialmesh-ul {
@@ -397,7 +415,7 @@ img {
 }
 
 .footer-socialmesh-icon {
-  fill: #ffffff;
+  fill: var(--color-white);
 }
 
 .clients.section {
@@ -477,9 +495,9 @@ img {
   letter-spacing: 0.03em;
   padding-left: 22px;
   padding-right: 22px;
-  background: #f5f4fa;
+  background: var(--bcg-grey);
   border-radius: 4px;
-  border: #f5f4fa;
+  border: var(--bcg-grey);
 }
 
 .btn:hover,
@@ -501,9 +519,9 @@ img {
   padding-bottom: 20px;
   padding-left: 24px;
 
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid var(--border-grey);
+  border-right: 1px solid var(--border-grey);
+  border-bottom: 1px solid var(--border-grey);
 }
 
 .portfolio-list h2 {
